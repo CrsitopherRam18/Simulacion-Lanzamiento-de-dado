@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Lanzamiento de dados</title>
+	<style>
+body{
+    background-color: #ddd;
+	display: flex;
+	margin: 0 auto;
+		}
+.contenedor{
+	width: 90%;
+    max-width: 1000px;
+    margin: auto;
+		}
+.contenedor  h1{
+	text-align: center;
+	font-size: 16;
+	font-family: 'Arial';
+	color:  #5995fd;
+    font-weight: 300;
+}
+.contenedor  img{
+	align-items: center;
+	align-content: center;
+	width: 30%;
+	box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+.imagen{
+	  width: 550px;
+	  justify-content: center;
+	  align-items: center;
+}
+.contenedor  button{
+	background: #2980B9;
+    padding: 10px 40px;
+    border-radius: 10px;
+    width: 250px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    transition: all 500ms;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+button:hover{
+	background: #8EB4E6;
+	}
+	</style>
+</head>
+<body>
+<div class="contenedor">
+<h1>Juego del Dado</h1>
+<div class="imagen">
+<img src="dado.png"/>
+</div>
+<button  onclick="Dado(1, 6);">LANZAR</button>
+<div>
+<img src="p.png" id="foto" class="imagen"/>
+	</div>
+</div>
+<script>
+function Dado (min, max) 
+{
+var numero  = Math.round(Math.random() * (1 + max-min) + min );
+console.log(numero);
+if(numero == 1)
+{
+	alert("1");
+	var imagen1 = document.getElementById("foto");
+	imagen1.src = "uno.png";
+}
+else if(numero == 2)
+{
+	alert("2");
+	var imagen2 = document.getElementById("foto");
+	imagen2.src = "dos.png";
+}
+else if(numero == 3)
+{
+	alert("3");
+	var imagen3 = document.getElementById("foto");
+	imagen3.src = "tres.png";
+}
+else if(numero == 4)
+{
+	alert("4");
+	var imagen4 = document.getElementById("foto");
+	imagen4.src = "cuatro.png";
+}
+else if(numero == 5)
+{
+	alert("5");
+	var imagen5 = document.getElementById("foto");
+	imagen5.src = "cinco.png";
+}
+else if(numero == 6){
+    alert("6");
+    var imagen6 = document.getElementById("foto");
+    imagen6.src = "seis.png";
+}
+
+} 
+</script>
+</body>
+</html>
